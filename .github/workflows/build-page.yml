@@ -15,14 +15,14 @@ jobs:
       uses: addnab/docker-run-action@v3
       with:
         image: squidfunk/mkdocs-material:latest
-        options: -v ${PWD}:/docs
+        options: -v $(pwd):/docs
         run: build -f config/en/mkdocs.yml
 
     - name: Build Spanish version
       uses: addnab/docker-run-action@v3
       with:
         image: squidfunk/mkdocs-material:latest
-        options: -v ${PWD}:/docs
+        options: -v $(pwd):/docs
         run: build -f config/es/mkdocs.yml
       
     - name: Copy CNAME
