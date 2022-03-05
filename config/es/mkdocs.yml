@@ -1,0 +1,74 @@
+site_name: Soporte | Hermes
+docs_dir: '../../docs/es'
+site_dir: '../../dist/es'
+
+theme:
+  name: material
+  language: es
+  logo: assets/images/logo_light_256.png
+  custom_dir: '../../overrides/'
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.expand
+
+repo_url: https://github.com/travelhermes/hermes
+
+extra:
+  alternate:
+    - name: Español
+      link: /es/ 
+      lang: es
+    - name: English
+      link: /en/
+      lang: en
+
+plugins:
+  - search:                                         
+      lang: es
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+- Inicio: index.md
+- Cómo usar Hermes:
+  - Cuenta: 
+    - como-usar-hermes/cuenta/registrarse.md
+    - como-usar-hermes/cuenta/iniciar-sesion.md
+    - como-usar-hermes/cuenta/correos-electronicos.md
+    - como-usar-hermes/cuenta/perfil.md
+  - Recomendaciones: 
+    - como-usar-hermes/recomendaciones/index.md
+    - como-usar-hermes/recomendaciones/explorar.md
+    - como-usar-hermes/recomendaciones/crear-un-plan.md
+  - Planificaciones: como-usar-hermes/planificaciones/index.md
+  - Puntuaciones: como-usar-hermes/puntuaciones/index.md
+- Contribuir: https://github.com/travelhermes/hermes
+- Contacto: contacto/index.md
+- Legal:
+  - legal/terminos-y-condiciones.md
+  - legal/politica-de-privacidad.md
+
+copyright: 'Hecho por <a style="text-decoration: underline;" href="https://alvaro.galisteo.me">Álvaro Galisteo</a>.<noscript><img src="https://insights.galisteo.me/ingress/128a0110-792e-422b-93fb-d72d05dff7fb/pixel.gif"></noscript><script defer src="https://insights.galisteo.me/ingress/128a0110-792e-422b-93fb-d72d05dff7fb/script.js"></script>'

@@ -1,0 +1,74 @@
+site_name: Support | Hermes
+docs_dir: '../../docs/en'
+site_dir: '../../dist/en'
+
+theme:
+  name: material
+  language: en
+  logo: assets/images/logo_light_256.png
+  custom_dir: '../../overrides/'
+  palette: 
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.expand
+
+repo_url: https://github.com/travelhermes/hermes
+
+extra:
+  alternate:
+    - name: Español
+      link: /es/ 
+      lang: es
+    - name: English
+      link: /en/
+      lang: en
+
+plugins:
+  - search:                                         
+      lang: en
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+- Home: index.md
+- How to use Hermes:
+  - Account: 
+    - how-to-use-hermes/account/signup.md
+    - how-to-use-hermes/account/signin.md
+    - how-to-use-hermes/account/emails.md
+    - how-to-use-hermes/account/profile.md
+  - Recommendations: 
+    - how-to-use-hermes/recommendations/index.md
+    - how-to-use-hermes/recommendations/explore.md
+    - how-to-use-hermes/recommendations/create-a-plan.md
+  - Planning: how-to-use-hermes/planning/index.md
+  - Ratings: how-to-use-hermes/ratings/index.md
+- Contribute: https://github.com/travelhermes/hermes
+- Contact: contact/index.md
+- Legal:
+  - legal/terms-and-conditions.md
+  - legal/privacy-policy.md
+
+copyright: 'Made by <a style="text-decoration: underline;"  href="https://alvaro.galisteo.me">Álvaro Galisteo</a>.<noscript><img src="https://insights.galisteo.me/ingress/128a0110-792e-422b-93fb-d72d05dff7fb/pixel.gif"></noscript><script defer src="https://insights.galisteo.me/ingress/128a0110-792e-422b-93fb-d72d05dff7fb/script.js"></script>'
