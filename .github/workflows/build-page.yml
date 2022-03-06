@@ -11,19 +11,12 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - name: Build English version
+    - name: Build site
       uses: addnab/docker-run-action@v3
       with:
         image: squidfunk/mkdocs-material:latest
         options: -v /home/runner/work/support/support:/docs
-        run: build -f config/en/mkdocs.yml
-
-    - name: Build Spanish version
-      uses: addnab/docker-run-action@v3
-      with:
-        image: squidfunk/mkdocs-material:latest
-        options: -v /home/runner/work/support/support:/docs
-        run: build -f config/es/mkdocs.yml
+        run: mkdocs build -f config/en/mkdocs.yml && mkdocs build -f config/en/mkdocs.yml
       
     - name: Copy CNAME
       run: cp CNAME dist/CNAME
