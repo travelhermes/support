@@ -16,7 +16,7 @@ jobs:
       with:
         image: squidfunk/mkdocs-material:latest
         options: -v /home/runner/work/support/support:/docs
-        run: mkdocs build -f config/en/mkdocs.yml && mkdocs build -f config/en/mkdocs.yml
+        run: mkdocs build -f config/en/mkdocs.yml && mkdocs build -f config/es/mkdocs.yml
       
     - name: Copy CNAME
       run: cp CNAME dist/CNAME
